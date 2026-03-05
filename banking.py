@@ -7,21 +7,21 @@ class BankAccount:
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
-            print(f"✅ Deposited: ${amount}")
+            print(f" Deposited: ${amount}")
         else:
-            print("❌ Invalid deposit amount.")
+            print(" Invalid deposit amount.")
 
     def withdraw(self, amount):
         if amount <= 0:
-            print("❌ Invalid withdrawal amount.")
+            print(" Invalid withdrawal amount.")
         elif amount > self.balance:
-            print("❌ Insufficient balance.")
+            print(" Insufficient balance.")
         else:
             self.balance -= amount
-            print(f"✅ Withdrawn: ${amount}")
+            print(f" Withdrawn: ${amount}")
 
     def check_balance(self):
-        print(f"💰 Current Balance: ${self.balance}")
+        print(f" Current Balance: ${self.balance}")
 
     def display_details(self):
         print("\n--- Account Details ---")
@@ -32,7 +32,7 @@ class BankAccount:
 
 
 def main():
-    print("🏦 Welcome to Python Bank System")
+    print(" Welcome to Python Bank System")
     
     name = input("Enter account holder name: ")
     acc_number = input("Enter account number: ")
@@ -62,11 +62,11 @@ def main():
             account.display_details()
 
         elif choice == "5":
-            print("👋 Thank you for banking with us!")
+            print(" Thank you for banking with us!")
             break
 
         else:
-            print("❌ Invalid choice. Try again.")
+            print(" Invalid choice. Try again.")
 
 
 if __name__ == "__main__":
